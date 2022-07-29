@@ -1,0 +1,66 @@
+body {
+    background: url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_960_720.png) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.accordion {
+    width: 65%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+
+.accordion .accordion-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.accordion .content-container .question {
+    padding: 18px 0px;
+    font-size: 22px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+
+    position: relative;
+}
+
+.accordion .content-container .question::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+
+}
+
+.accordion .content-container .answer {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 1.3;
+    width: 100%;
+    height: 0px;  /* We will make the overflow hidden. When plus sign is clicked height will be bigger so text will appear on the screen. */
+    overflow: hidden;
+    transition: 0.5s;
+    
+}
+
+
+/*JS styling link */
+
+.accordion .active .answer {
+    padding: 3px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+
+.accordion .content-container.active .question::after {
+    content:'-';
+}
+
+
